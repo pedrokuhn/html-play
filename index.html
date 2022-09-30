@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Gerador Mega-Sena</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost|Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Proprietário -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="clover-container">
+        <img src="./img/nature.png" class="clover" alt="trevo" />
+      </div>
+
+      <div class="title-container">
+        <h1>Gerador Mega-Sena</h1>
+        <p>
+          Informe 15 números entre 1 e 60 para gerar 10 jogs aleatórios com seis dezenas.
+        </p>
+      </div>
+
+      <div class="balls-container">
+        <div class="input-balls">
+          <div class="input-ball">
+            <input type="number" id="ball0">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball1">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball2">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball3">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball4">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball5">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball6">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball7">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball8">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball9">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball10">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball11">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball12">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball13">
+          </div>
+        </div>
+
+        <div class="input-balls">
+          <div class="ball">
+            <input type="number" id="ball14">
+          </div>
+        </div>
+      </div>
+
+      <div class="button btn-container">
+        <button type="button" class="btn btn-warning btn-lg generate">
+          Gerar Jogo!
+        </button>
+      </div>
+
+      <div class="legend-title-container">
+        <p>Legenda:</p>
+      </div>
+
+      <div class="legend-container">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-danger">
+            🔥 => Número está entre os <strong>dez mais
+            sorteados</strong> .
+          </li>
+          <li class="list-group-item list-group-item-primary">
+            🧊 => Número está entre os <strong>dez menos 
+            sorteados</strong> 
+            .
+          </li>
+        </ul>
+      </div>
+
+      <div class="title-container">
+        <h1>Resultados do Gerador da Mega-Sena</h1>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game0-0">??</span>
+          </div>
+          <div id="alert0-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game0-1">??</span>
+          </div>
+          <div id="alert0-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game0-2">??</span>
+          </div>
+          <div id="alert0-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game0-3">??</span>
+          </div>
+          <div id="alert0-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game0-4">??</span>
+          </div>
+          <div id="alert0-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game0-5">??</span>
+          </div>
+          <div id="alert0-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game1-0">??</span>
+          </div>
+          <div id="alert1-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game1-1">??</span>
+          </div>
+          <div id="alert1-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game1-2">??</span>
+          </div>
+          <div id="alert1-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game1-3">??</span>
+          </div>
+          <div id="alert1-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game1-4">??</span>
+          </div>
+          <div id="alert1-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game1-5">??</span>
+          </div>
+          <div id="alert1-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game2-0">??</span>
+          </div>
+          <div id="alert2-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game2-1">??</span>
+          </div>
+          <div id="alert2-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game2-2">??</span>
+          </div>
+          <div id="alert2-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game2-3">??</span>
+          </div>
+          <div id="alert2-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game2-4">??</span>
+          </div>
+          <div id="alert2-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game2-5">??</span>
+          </div>
+          <div id="alert2-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game3-0">??</span>
+          </div>
+          <div id="alert3-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game3-1">??</span>
+          </div>
+          <div id="alert3-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game3-2">??</span>
+          </div>
+          <div id="alert3-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game3-3">??</span>
+          </div>
+          <div id="alert3-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game3-4">??</span>
+          </div>
+          <div id="alert3-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game3-5">??</span>
+          </div>
+          <div id="alert3-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game4-0">??</span>
+          </div>
+          <div id="alert4-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game4-1">??</span>
+          </div>
+          <div id="alert4-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game4-2">??</span>
+          </div>
+          <div id="alert4-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game4-3">??</span>
+          </div>
+          <div id="alert4-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game4-4">??</span>
+          </div>
+          <div id="alert4-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game4-5">??</span>
+          </div>
+          <div id="alert4-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game5-0">??</span>
+          </div>
+          <div id="alert5-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game5-1">??</span>
+          </div>
+          <div id="alert5-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game5-2">??</span>
+          </div>
+          <div id="alert5-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game5-3">??</span>
+          </div>
+          <div id="alert5-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game5-4">??</span>
+          </div>
+          <div id="alert5-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game5-5">??</span>
+          </div>
+          <div id="alert5-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game6-0">??</span>
+          </div>
+          <div id="alert6-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game6-1">??</span>
+          </div>
+          <div id="alert6-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game6-2">??</span>
+          </div>
+          <div id="alert6-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game6-3">??</span>
+          </div>
+          <div id="alert6-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game6-4">??</span>
+          </div>
+          <div id="alert6-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game6-5">??</span>
+          </div>
+          <div id="alert6-5" class="aler9-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game7-0">??</span>
+          </div>
+          <div id="alert7-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game7-1">??</span>
+          </div>
+          <div id="alert7-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game7-2">??</span>
+          </div>
+          <div id="alert7-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game7-3">??</span>
+          </div>
+          <div id="alert7-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game7-4">??</span>
+          </div>
+          <div id="alert7-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game7-5">??</span>
+          </div>
+          <div id="alert7-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game8-0">??</span>
+          </div>
+          <div id="alert8-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game8-1">??</span>
+          </div>
+          <div id="alert8-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game8-2">??</span>
+          </div>
+          <div id="alert8-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game8-3">??</span>
+          </div>
+          <div id="alert8-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game8-4">??</span>
+          </div>
+          <div id="alert8-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game8-5">??</span>
+          </div>
+          <div id="alert8-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="balls-container-result">
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game9-0">??</span>
+          </div>
+          <div id="alert9-0" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game9-1">??</span>
+          </div>
+          <div id="alert9-1" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game9-2">??</span>
+          </div>
+          <div id="alert9-2" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game9-3">??</span>
+          </div>
+          <div id="alert9-3" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game9-4">??</span>
+          </div>
+          <div id="alert9-4" class="alert-text" role="alert"></div>
+        </div>
+
+        <div class="balls">
+          <div class="ball">
+            <span id="ball-result-game9-5">??</span>
+          </div>
+          <div id="alert9-5" class="alert-text" role="alert"></div>
+        </div>
+      </div>
+
+      <div class="footer-container">
+        <p class="credit">
+          &copy Website desenvolvido em 2022 por
+          <a href='mailto:vieiratn@gmail.com' class="contact" target="_blank"
+            >Pedro Mastelaro</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    <!-- JS Proprietário -->
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
